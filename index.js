@@ -32,5 +32,9 @@ app.use((req, res, next) => {
 app.use("/admin", admin_route);
 app.use("/", user_route);
 
-app.listen(3000);
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
 // test change
